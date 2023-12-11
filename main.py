@@ -5,24 +5,22 @@ class RoboCat:
         self.speed = speed
         self.sound = sound
         self.color = color
-
     def play_sound(self):
         print(f"Мой робокот говорит {self.sound}")
 
-
 class AngryRoboCat(RoboCat):
-    def __init__(self, speed, hp, color):
-        super().__init__(speed, hp, color)
+    def __init__(self):
+        super().__init__.speed = 100
         self.superpower = "стрелять лазерами из глаз"
 
-    def take_damage(self, damage):
+    def damage(self, damage):
         self.hp -= damage
         print(f"Осталось {self.hp}")
 
-# my_robocat = RoboCat(10, "meow", "blue")
-# print(my_robocat.ears)
-# my_robocat.play_sound()
-angry = AngryRoboCat(100,9, 'red')
-angry.take_damage(2)
+my_robocat = RoboCat(10, "meow", "blue")
+print(my_robocat.color)
+my_robocat.play_sound()
 
+angry = AngryRoboCat(100, 9, "red")
+angry.take_damage(2)
 
